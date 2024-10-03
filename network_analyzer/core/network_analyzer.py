@@ -1,3 +1,7 @@
+import platform
+import subprocess
+
+from tqdm import tqdm
 from core.host_scanner import HostScanner
 from core.port_scanner import PortScanner
 from core.service_scanner import ServiceScanner
@@ -42,7 +46,7 @@ class NetworkAnalyzer:
             print_table(active_hosts, "hosts")
             return active_hosts
         elif method == "scapy":
-            active_hosts = self.host_scanner.hosts_scan()
+            active_hosts = self.host_scanner.scan_hosts_scapy()
             print_table(active_hosts, "hosts")
             return active_hosts
         else:
@@ -59,7 +63,7 @@ class NetworkAnalyzer:
         Returns:
             dict: Dictionary of hosts and their open ports.
         """
-        all_open_ports = {host: self.port_scanner.scan_ports(host, port_range) for host in hosts}
+        all_open_ports = {host: tqdm(self.port_scanner.scan_ports(host, port_range), desc="Scanning ports...") for host in hosts}
         print_table(all_open_ports, "ports")
         return all_open_ports
 
@@ -92,6 +96,44 @@ class NetworkAnalyzer:
         print_table(smb_shares, "shares")
         return smb_shares
 
+    def check_connectivity(self):
+        """
+        Checks the network connectivity by examining the default route and network interfaces.
+        
+        Returns:
+            bool: True if a valid route and network interface is found, False otherwise.
+        """
+        system_platform = platform.system()
+
+        try:
+            if system_platform == "Linux" or system_platform == "Darwin":  # For Linux/macOS
+                print("Checking connectivity on Linux/macOS...")
+                result = subprocess.run(['ip', 'route'], capture_output=True, text=True)
+                if 'default' in result.stdout:
+                    print("Default route found. Network connectivity looks good.")
+                    return True
+                else:
+                    print("No default route found. Check your network settings.")
+                    return False
+
+            elif system_platform == "Windows":  # For Windows
+                print("Checking connectivity on Windows...")
+                result = subprocess.run(['route', 'print'], capture_output=True, text=True)
+                if '0.0.0.0' in result.stdout:
+                    print("Default route found. Network connectivity looks good.")
+                    return True
+                else:
+                    print("No default route found. Check your network settings.")
+                    return False
+
+            else:
+                print(f"Unsupported platform: {system_platform}")
+                return False
+
+        except Exception as e:
+            print(f"Error while checking connectivity: {str(e)}")
+            return False
+
     def run_full_scan(self):
         """
         Runs a full scan, including host discovery, port scanning, service detection, and SMB share enumeration.
@@ -101,19 +143,24 @@ class NetworkAnalyzer:
         """
         print("Starting full network scan...")
 
-        # Step 1: Scan for hosts
-        print("Scanning for hosts...")
-        active_hosts = self.scan_hosts(method="scapy")  # Puedes cambiar "scapy" a "arp" según necesites.
+        # Step 1: Check network connectivity
+        if not self.check_connectivity():
+            print("Network connectivity could not be verified. Aborting scan.")
+            return
 
-        # Step 2: Scan open ports
+        # Step 2: Scan for hosts
+        print("Scanning for hosts...")
+        active_hosts = self.scan_hosts(method="scapy")
+
+        # Step 3: Scan open ports
         print("Scanning for open ports on active hosts...")
         open_ports = self.scan_ports(active_hosts)
 
-        # Step 3: Scan for services on open ports
+        # Step 4: Scan for services on open ports
         print("Scanning for services and banners...")
         services = self.scan_services(active_hosts)
 
-        # Step 4: Scan for SMB shares
+        # Step 5: Scan for SMB shares
         print("Scanning for SMB shares...")
         smb_shares = self.scan_smb_shares(active_hosts)
 

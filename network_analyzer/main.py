@@ -1,7 +1,7 @@
 from core.network_analyzer import NetworkAnalyzer
 
 def main():
-    network_range = "192.168.1.0/24"
+    network_range = "192.168.11.0/24"
     timeout = 1
 
     # Initialize NetworkAnalyzer
@@ -9,6 +9,7 @@ def main():
 
     # Run a full scan
     results = analyzer.run_full_scan()
+    
 
     # Optionally, process or save the results
     print("Full scan completed!")
