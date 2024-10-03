@@ -1,10 +1,18 @@
-npm-debug.log
-.DS_Store
+# Files generated when packaging the project
+dist/
+build/
+*.egg-info/
 
-app/**/*.js
-hooks/
-lib/
-node_modules/
-platforms/
-tmp/
-typings/
+# Python cache files (no need to include them)
+__pycache__/
+
+# PyPI configuration file (do not include in the repository!)
+~/.pypirc
+
+pyvenv.cfg
+
+network_analyzer/Lib
+network_analyzer/Scripts
+network_analyzer/share
+
+.env
