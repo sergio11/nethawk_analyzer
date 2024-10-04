@@ -1,2 +1,1 @@
-# nativescript-sample
-An example to show NativeScript in action
+# NetHawk 🦅: AI-Powered Ethical Hacking 🔍💻 & Network Vulnerability Assessment 🛡️🌐"
