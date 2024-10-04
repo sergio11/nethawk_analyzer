@@ -8,7 +8,7 @@ def main():
     analyzer = NetworkAnalyzer(network_range, timeout)
 
     # Run a full scan
-    results = analyzer.run_full_scan()
+    results = analyzer.scan_ports(["192.168.11.128"])
     
 
     # Optionally, process or save the results

@@ -11,8 +11,8 @@ __pycache__/
 
 pyvenv.cfg
 
-network_analyzer/Lib
-network_analyzer/Scripts
-network_analyzer/share
+NetHawk/Lib
+NetHawk/Scripts
+NetHawk/share
 
 .env

@@ -1,12 +1,11 @@
 import platform
 import subprocess
-
-from tqdm import tqdm
 from core.host_scanner import HostScanner
 from core.port_scanner import PortScanner
 from core.service_scanner import ServiceScanner
 from core.smb_scanner import SMBScanner
 from utils.printer import print_table
+from tqdm import tqdm
 
 class NetworkAnalyzer:
     """
@@ -51,8 +50,37 @@ class NetworkAnalyzer:
             return active_hosts
         else:
             raise ValueError(f"Unknown scan method: {method}")
+        
+    def scan_all_ports(self, hosts, port_range=(0, 10000)):
+        """
+        Scans open ports on a list of active hosts using SYN, UDP, and Xmas scans.
 
-    def scan_ports(self, hosts, port_range=(0, 10000)):
+        Args:
+            hosts (list): List of active hosts to scan.
+            port_range (tuple): Range of ports to scan (start, end).
+        
+        Returns:
+            dict: Dictionary of hosts and their open ports for each scan type.
+        """
+        all_open_ports = {host: {"TCP": [], "UDP": [], "Xmas": []} for host in hosts}
+
+        for host in tqdm(hosts, desc="Scanning hosts for open ports"):
+            # TCP SYN scan
+            tcp_open_ports = self.port_scanner.scan_ports(host, port_range, scan_type='tcp')
+            all_open_ports[host]["TCP"].extend(tcp_open_ports)
+
+            # UDP scan
+            udp_open_ports = self.port_scanner.scan_ports(host, port_range, scan_type='udp')
+            all_open_ports[host]["UDP"].extend(udp_open_ports)
+
+            # Xmas scan
+            xmas_open_ports = self.port_scanner.scan_ports(host, port_range, scan_type='xmas')
+            all_open_ports[host]["Xmas"].extend(xmas_open_ports)
+
+        print_table(all_open_ports, "ports")
+        return all_open_ports
+
+    def scan_ports(self, hosts, scan_type='tcp', port_range=(0, 10000)):
         """
         Scans open ports on a list of active hosts.
 
@@ -63,7 +91,7 @@ class NetworkAnalyzer:
         Returns:
             dict: Dictionary of hosts and their open ports.
         """
-        all_open_ports = {host: tqdm(self.port_scanner.scan_ports(host, port_range), desc="Scanning ports...") for host in hosts}
+        all_open_ports = {host: self.port_scanner.scan_ports(host, scan_type, port_range) for host in hosts}
         print_table(all_open_ports, "ports")
         return all_open_ports
 
@@ -81,7 +109,7 @@ class NetworkAnalyzer:
         services_info = {host: self.service_scanner.scan_services(host, port_range) for host in hosts}
         print_table(services_info, "services")
         return services_info
-
+    
     def scan_smb_shares(self, hosts):
         """
         Scans for public SMB shares on a list of active hosts.
@@ -95,7 +123,7 @@ class NetworkAnalyzer:
         smb_shares = self.smb_scanner.scan_smb_shares(hosts)
         print_table(smb_shares, "shares")
         return smb_shares
-
+    
     def check_connectivity(self):
         """
         Checks the network connectivity by examining the default route and network interfaces.
