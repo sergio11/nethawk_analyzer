@@ -11,6 +11,7 @@ __pycache__/
 
 pyvenv.cfg
 
+NetHawkAnalyzer/example_result.json
 NetHawk/Lib
 NetHawk/Scripts
 NetHawk/share

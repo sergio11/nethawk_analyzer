@@ -3,3 +3,6 @@ tqdm==4.64.1
 rich==12.6.0
 pysmb==1.2.10
 python3-nmap==1.9.1
+langchain
+langchain-groq
+fpdf2==2.8.1
