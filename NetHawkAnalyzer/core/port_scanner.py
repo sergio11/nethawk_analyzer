@@ -33,7 +33,7 @@ class PortScanner:
                 results = nmap.scan_top_ports(ip)
             else:
                 results = nmap.scan(ip, args)
-            logger.info(f"✅ Nmap scan completed on {ip}. Results: {results}")
+            logger.info(f"✅ Nmap scan completed on {ip}")
             return results
         except Exception as e:
             logger.error(f"⚠️ Error during Nmap scan on {ip}: {e}")

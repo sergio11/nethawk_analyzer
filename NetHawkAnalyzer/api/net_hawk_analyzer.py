@@ -7,7 +7,7 @@ from core.smb_scanner import SMBScanner
 from utils.printer import print_table
 from tqdm import tqdm
 
-class NetworkAnalyzer:
+class NetHawkAnalyzer:
     """
     Facade class to provide a simplified interface for network scanning operations.
     It hides the complexity of interacting with various scanners and utilities.
@@ -29,6 +29,7 @@ class NetworkAnalyzer:
         self.port_scanner = PortScanner(timeout)
         self.service_scanner = ServiceScanner(timeout)
         self.smb_scanner = SMBScanner(timeout)
+        self._print_banner()
 
     def scan_hosts(self, method="arp"):
         """
@@ -164,38 +165,51 @@ class NetworkAnalyzer:
 
     def run_full_scan(self):
         """
-        Runs a full scan, including host discovery, port scanning, service detection, and SMB share enumeration.
+        🛡️ Runs a full scan, including host discovery, port scanning, service detection, and SMB share enumeration.
 
         Returns:
             dict: A dictionary containing the results of all scan stages.
         """
-        print("Starting full network scan...")
+        print("🚀 Starting full network scan...")
 
         # Step 1: Check network connectivity
         if not self.check_connectivity():
-            print("Network connectivity could not be verified. Aborting scan.")
+            print("❌ Network connectivity could not be verified. Aborting scan.")
             return
 
         # Step 2: Scan for hosts
-        print("Scanning for hosts...")
+        print("🌐 Scanning for hosts...")
         active_hosts = self.scan_hosts(method="scapy")
 
         # Step 3: Scan open ports
-        print("Scanning for open ports on active hosts...")
+        print("🔍 Scanning for open ports on active hosts...")
         open_ports = self.scan_ports(active_hosts)
 
         # Step 4: Scan for services on open ports
-        print("Scanning for services and banners...")
+        print("🛠️ Scanning for services and banners...")
         services = self.scan_services(active_hosts)
 
         # Step 5: Scan for SMB shares
-        print("Scanning for SMB shares...")
+        print("📁 Scanning for SMB shares...")
         smb_shares = self.scan_smb_shares(active_hosts)
 
         # Collate the results
         return {
-            "hosts": active_hosts,
-            "open_ports": open_ports,
-            "services": services,
-            "smb_shares": smb_shares
+            "hosts": active_hosts,         # 🌐 Active hosts discovered
+            "open_ports": open_ports,      # 🚪 Open ports found
+            "services": services,          # 🛠️ Services and banners
+            "smb_shares": smb_shares       # 📁 SMB shares discovered
         }
+
+    def _print_banner(self):
+        banner = """
+        ███╗   ██╗███████╗████████╗██╗  ██╗ █████╗ ██╗    ██╗ ██╗  ██╗
+        ████╗  ██║██╔════╝╚══██╔══╝██║  ██║██╔══██╗██║    ██║ ██║ ██╔╝
+        ██╔██╗ ██║█████╗     ██║   ███████║███████║██║ █╗ ██║ █████╔╝ 
+        ██║╚██╗██║██╔══╝     ██║   ██╔══██║██╔══██║██║███╗██║ ██╔═██╗ 
+        ██║ ╚████║███████╗   ██║   ██║  ██║██║  ██║╚███╔███╔╝ ██║  ██╗
+        ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝
+        🦅 NetHawk - AI-Powered Network Scanning and Vulnerability Assessment 🛡️
+        """
+    
+        print(banner)
