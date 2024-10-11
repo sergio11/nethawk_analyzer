@@ -1,25 +1,37 @@
 import platform
 import subprocess
-from core.host_scanner import HostScanner
-from core.port_scanner import PortScanner
-from core.service_scanner import ServiceScanner
-from core.smb_scanner import SMBScanner
-from utils.printer import print_table
+from NetHawkAnalyzer.core.ai_security_analyzer import AISecurityAnalyzer
+from NetHawkAnalyzer.core.host_scanner import HostScanner
+from NetHawkAnalyzer.core.port_scanner import PortScanner
+from NetHawkAnalyzer.core.service_scanner import ServiceScanner
+from NetHawkAnalyzer.core.smb_scanner import SMBScanner
+from NetHawkAnalyzer.utils.printer import print_table
 from tqdm import tqdm
+
 
 class NetHawkAnalyzer:
     """
     Facade class to provide a simplified interface for network scanning operations.
-    It hides the complexity of interacting with various scanners and utilities.
+    This class abstracts the complexity of interacting with various scanners and utilities.
+
+    Attributes:
+        network_range (str): The range of IP addresses to scan.
+        timeout (int): Timeout for scanning operations (in seconds).
+        host_scanner (HostScanner): Instance of the host scanner.
+        port_scanner (PortScanner): Instance of the port scanner.
+        service_scanner (ServiceScanner): Instance of the service scanner.
+        smb_scanner (SMBScanner): Instance of the SMB scanner.
     """
 
-    def __init__(self, network_range, timeout=1):
+    def __init__(self, network_range, timeout=1, groq_api_key=None, model_id="llama3-70b-8192"):
         """
-        Initialize the facade with a network range and timeout.
+        Initializes the facade with a network range, timeout, and security analyzer.
 
         Args:
-            network_range (str): The range of IP addresses to scan.
-            timeout (int): Timeout for scanning operations (in seconds).
+            network_range (str): The range of IP addresses to scan (e.g., '192.168.1.0/24').
+            timeout (int): Timeout for scanning operations (in seconds). Default is 1.
+            groq_api_key (str): The API key for accessing Groq services.
+            model_id (str): The ID of the Groq model to use. Default is 'llama3-70b-8192'.
         """
         self.network_range = network_range
         self.timeout = timeout
@@ -29,6 +41,10 @@ class NetHawkAnalyzer:
         self.port_scanner = PortScanner(timeout)
         self.service_scanner = ServiceScanner(timeout)
         self.smb_scanner = SMBScanner(timeout)
+
+        # Initialize the security analyzer with customizable model_id
+        self.security_analyzer = AISecurityAnalyzer(model_id=model_id, groq_api_key=groq_api_key)
+
         self._print_banner()
 
     def scan_hosts(self, method="arp"):
@@ -37,9 +53,12 @@ class NetHawkAnalyzer:
 
         Args:
             method (str): Scanning method to use, e.g., "arp" for ARP scanning or "scapy" for advanced scanning.
-        
+
         Returns:
-            list: List of active hosts.
+            list: List of active hosts detected.
+
+        Raises:
+            ValueError: If an unknown scanning method is specified.
         """
         if method == "arp":
             active_hosts = self.host_scanner.scan_hosts_arp()
@@ -51,15 +70,15 @@ class NetHawkAnalyzer:
             return active_hosts
         else:
             raise ValueError(f"Unknown scan method: {method}")
-        
+
     def scan_all_ports(self, hosts, port_range=(0, 10000)):
         """
-        Scans open ports on a list of active hosts using SYN, UDP, and Xmas scans.
+        Scans for open ports on a list of active hosts using TCP SYN, UDP, and Xmas scans.
 
         Args:
             hosts (list): List of active hosts to scan.
             port_range (tuple): Range of ports to scan (start, end).
-        
+
         Returns:
             dict: Dictionary of hosts and their open ports for each scan type.
         """
@@ -83,12 +102,12 @@ class NetHawkAnalyzer:
 
     def scan_ports(self, hosts, scan_type='tcp', port_range=(0, 10000)):
         """
-        Scans open ports on a list of active hosts.
+        Scans for open ports on a list of active hosts.
 
         Args:
             hosts (list): List of active hosts to scan.
             port_range (tuple): Range of ports to scan (start, end).
-        
+
         Returns:
             dict: Dictionary of hosts and their open ports.
         """
@@ -103,7 +122,7 @@ class NetHawkAnalyzer:
         Args:
             hosts (list): List of active hosts to scan.
             port_range (tuple): Range of ports to scan for services (start, end).
-        
+
         Returns:
             dict: Dictionary of hosts and their detected services.
         """
@@ -117,15 +136,65 @@ class NetHawkAnalyzer:
 
         Args:
             hosts (list): List of active hosts to scan for SMB shares.
-        
+
         Returns:
             dict: Dictionary of hosts and their discovered SMB shares.
         """
         smb_shares = self.smb_scanner.scan_smb_shares(hosts)
         print_table(smb_shares, "shares")
         return smb_shares
+
+    def run_full_scan(self, pdf_path="nethawk_security_report.pdf", json_path="nethawk_security_report.json"):
+        """
+        🛡️ Runs a full scan, including host discovery, port scanning, service detection, and SMB share enumeration.
+
+        Returns:
+            dict: A dictionary containing the results of all scan stages.
+        """
+        print("🚀 Starting full network scan...")
+
+        # Step 1: Check network connectivity
+        if not self._check_connectivity():
+            print("❌ Network connectivity could not be verified. Aborting scan.")
+            return
+
+        # Step 2: Scan for hosts
+        print("🌐 Scanning for hosts...")
+        active_hosts = self.scan_hosts(method="scapy")
+
+        # Step 3: Scan open ports
+        print("🔍 Scanning for open ports on active hosts...")
+        open_ports = self.scan_ports(active_hosts)
+
+        # Step 4: Scan for services on open ports
+        print("🛠️ Scanning for services and banners...")
+        services = self.scan_services(active_hosts)
+
+        # Step 5: Scan for SMB shares
+        print("📁 Scanning for SMB shares...")
+        smb_shares = self.scan_smb_shares(active_hosts)
+
+        # Prepare the results for analysis
+        scan_results = {
+            "hosts": active_hosts,         # 🌐 Active hosts discovered
+            "open_ports": open_ports,      # 🚪 Open ports found
+            "services": services,          # 🛠️ Services and banners
+            "smb_shares": smb_shares       # 📁 SMB shares discovered
+        }
+
+        # Step 6: Generate a security analysis report
+        print("📝 Generating security analysis report...")
+        report = self.security_analyzer.analyze_scan_results(scan_results, pdf_path=pdf_path, json_path=json_path)
+
+        # Print the generated report
+        if report:
+            print("🔍 Security analysis report generated successfully.")
+        else:
+            print("❌ Failed to generate security analysis report.")
+
+        return scan_results 
     
-    def check_connectivity(self):
+    def _check_connectivity(self):
         """
         Checks the network connectivity by examining the default route and network interfaces.
         
@@ -163,53 +232,16 @@ class NetHawkAnalyzer:
             print(f"Error while checking connectivity: {str(e)}")
             return False
 
-    def run_full_scan(self):
-        """
-        🛡️ Runs a full scan, including host discovery, port scanning, service detection, and SMB share enumeration.
-
-        Returns:
-            dict: A dictionary containing the results of all scan stages.
-        """
-        print("🚀 Starting full network scan...")
-
-        # Step 1: Check network connectivity
-        if not self.check_connectivity():
-            print("❌ Network connectivity could not be verified. Aborting scan.")
-            return
-
-        # Step 2: Scan for hosts
-        print("🌐 Scanning for hosts...")
-        active_hosts = self.scan_hosts(method="scapy")
-
-        # Step 3: Scan open ports
-        print("🔍 Scanning for open ports on active hosts...")
-        open_ports = self.scan_ports(active_hosts)
-
-        # Step 4: Scan for services on open ports
-        print("🛠️ Scanning for services and banners...")
-        services = self.scan_services(active_hosts)
-
-        # Step 5: Scan for SMB shares
-        print("📁 Scanning for SMB shares...")
-        smb_shares = self.scan_smb_shares(active_hosts)
-
-        # Collate the results
-        return {
-            "hosts": active_hosts,         # 🌐 Active hosts discovered
-            "open_ports": open_ports,      # 🚪 Open ports found
-            "services": services,          # 🛠️ Services and banners
-            "smb_shares": smb_shares       # 📁 SMB shares discovered
-        }
-
     def _print_banner(self):
+        """
+        Prints a welcome banner at the start of the program.
+        """
         banner = """
         ███╗   ██╗███████╗████████╗██╗  ██╗ █████╗ ██╗    ██╗ ██╗  ██╗
         ████╗  ██║██╔════╝╚══██╔══╝██║  ██║██╔══██╗██║    ██║ ██║ ██╔╝
         ██╔██╗ ██║█████╗     ██║   ███████║███████║██║ █╗ ██║ █████╔╝ 
         ██║╚██╗██║██╔══╝     ██║   ██╔══██║██╔══██║██║███╗██║ ██╔═██╗ 
         ██║ ╚████║███████╗   ██║   ██║  ██║██║  ██║╚███╔███╔╝ ██║  ██╗
-        ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝
-        🦅 NetHawk - AI-Powered Network Scanning and Vulnerability Assessment 🛡️
+        ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝  ╚═╝  ╚═╝
         """
-    
         print(banner)

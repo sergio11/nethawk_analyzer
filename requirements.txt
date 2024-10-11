@@ -1,8 +1,9 @@
 scapy==2.6.0
-tqdm==4.64.1
-rich==12.6.0
+tqdm==4.65.0
+rich==13.9.2
 pysmb==1.2.10
 python3-nmap==1.9.1
-langchain
-langchain-groq
+langchain==0.2.16
+langchain-groq==0.1.10
 fpdf2==2.8.1
+python-dotenv==1.0.1
