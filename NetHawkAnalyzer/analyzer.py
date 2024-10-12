@@ -13,14 +13,6 @@ class NetHawkAnalyzer:
     """
     Facade class to provide a simplified interface for network scanning operations.
     This class abstracts the complexity of interacting with various scanners and utilities.
-
-    Attributes:
-        network_range (str): The range of IP addresses to scan.
-        timeout (int): Timeout for scanning operations (in seconds).
-        host_scanner (HostScanner): Instance of the host scanner.
-        port_scanner (PortScanner): Instance of the port scanner.
-        service_scanner (ServiceScanner): Instance of the service scanner.
-        smb_scanner (SMBScanner): Instance of the SMB scanner.
     """
 
     def __init__(self, network_range, timeout=1, groq_api_key=None, model_id="llama3-70b-8192"):
