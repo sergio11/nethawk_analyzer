@@ -3,7 +3,7 @@
 NetHawk is an advanced, AI-powered tool designed for ethical hacking and comprehensive network vulnerability assessment. Built for cybersecurity professionals, network administrators, and ethical hackers, NetHawk utilizes powerful tools like Scapy and Nmap to perform deep scans, analyze network security, and uncover potential vulnerabilities in target systems.
 
 [![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?style=flat-square)](https://github.com/sergio11/nethawk_analyzer)
-[![PyPI](https://img.shields.io/pypi/v/VehicleDetectionTracker.svg?style=flat-square)](https://pypi.org/project/NetHawkAnalyzer/)
+[![PyPI](https://img.shields.io/pypi/v/NetHawkAnalyzer.svg?style=flat-square)](https://pypi.org/project/NetHawkAnalyzer/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/sergio11/nethawk_analyzer/blob/main/LICENSE)
 
 Thanks to AI-driven automation and intelligent decision-making, NetHawk simplifies port scanning, vulnerability detection, and report generation, making security audits faster, smarter, and more efficient.
@@ -173,7 +173,80 @@ Explore the following images to see how **NetHawk** works and the valuable infor
 | **langchain**           | `0.2.16`  | A framework for building applications with language models and AI capabilities.               |
 | **langchain-groq**      | `0.1.10`  | An extension for Langchain that enables integration with Groq-based systems.                  |
 | **fpdf2**               | `2.8.1`   | A library for generating PDF documents using Python.                                         |
-| **python-dotenv**       | `1.0.1`   | A tool to read key-value pairs from a `.env` file and set them as environment variables.     |
+
+
+## Getting Started with NetHawkAnalyzer 🦅
+
+To run the example provided below, follow these steps:
+
+### Prerequisites
+
+1. **Install NetHawkAnalyzer**:
+   Ensure you have the package installed. If you haven't done this yet, you can install it using pip:
+
+   ```bash
+   pip install NetHawkAnalyzer==0.1.9
+   ```
+2. **Set Up Environment Variables**: You need to set up two environment variables: **GROQ_API_KEY** and **MODEL_ID**. You can do this by creating a .env file in your project directory and adding your keys there.
+
+Example .env file:
+
+```bash
+GROQ_API_KEY=your_groq_api_key_here
+MODEL_ID=your_model_id_here
+ ```
+
+**Running the Example**
+
+Here's a sample script that demonstrates how to use NetHawkAnalyzer for network analysis. This script will load your environment variables, initialize the analyzer with a specified network range, and run a full scan.
+
+```python
+import os 
+from NetHawkAnalyzer.analyzer import NetHawkAnalyzer
+from dotenv import load_dotenv
+
+def main():
+    # Load environment variables from .env file
+    load_dotenv()
+
+    # Retrieve your API key and model ID from environment variables
+    groq_api_key = os.getenv("GROQ_API_KEY")
+    model_id = os.getenv("MODEL_ID")
+ 
+    # Initialize the NetHawkAnalyzer with your network range
+    analyzer = NetHawkAnalyzer(
+        network_range="192.168.11.0/24", 
+        groq_api_key=groq_api_key, 
+        model_id=model_id
+    )
+    
+    # Run a full scan
+    results = analyzer.run_full_scan()
+    
+    # Optionally, process or save the results
+    print("Full scan completed!")
+    print(results)
+
+if __name__ == "__main__":
+    main()
+```
+
+### Explanation
+
+- **Loading Environment Variables**: The script uses the `dotenv` library to load environment variables from a `.env` file. This allows you to keep sensitive information secure.
+
+- **Network Analyzer Initialization**: The `NetHawkAnalyzer` is initialized with the specified network range and your API credentials.
+
+- **Running a Scan**: The `run_full_scan()` method is called to perform a comprehensive network analysis.
+
+- **Displaying Results**: Finally, the results of the scan are printed to the console.
+
+### Important Notes
+
+- Make sure to replace `your_groq_api_key_here` and `your_model_id_here` in your `.env` file with your actual API key and model ID.
+- Ensure that the specified network range is appropriate for your network setup.
+
+By following these steps, you can successfully run the example script and begin analyzing your network using `NetHawkAnalyzer`! 🔍💻
 
 ## Acknowledgements 🙏
 
@@ -197,7 +270,7 @@ NetHawk is developed and maintained by **Sergio Sánchez Sánchez** (Dream Softw
 
 
 [![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?style=flat-square)](https://github.com/sergio11/nethawk_analyzer)
-[![PyPI](https://img.shields.io/pypi/v/VehicleDetectionTracker.svg?style=flat-square)](https://pypi.org/project/NetHawkAnalyzer/)
+[![PyPI](https://img.shields.io/pypi/v/NetHawkAnalyzer.svg?style=flat-square)](https://pypi.org/project/NetHawkAnalyzer/)
 
 ## License ⚖️
 
