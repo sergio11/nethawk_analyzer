@@ -8,6 +8,10 @@ Thanks to AI-driven automation and intelligent decision-making, NetHawk simplifi
 
 🔒 **Disclaimer**: This tool is designed for educational and research purposes. Misuse of this tool could result in violation of laws and regulations. Please use responsibly.
 
+<p align="center">
+  <img src="doc/screenshots/picture_1.PNG" />
+</p>
+
 ## 🌟 Key Features:
 
 - 🔧 **Multi-Tool Scanning**: Combines the power of Scapy and Nmap to conduct in-depth network scans, ensuring a comprehensive view of network activity and vulnerabilities.
