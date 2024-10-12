@@ -89,7 +89,7 @@ class AISecurityAnalyzer:
             self._generate_pdf_report(analysis, pdf_path)
 
             # Step 2: Generate the JSON report
-            self._generate_json_report(scan_results, json_path)
+            self._generate_json_report(scan_results, analysis=analysis, file_path=json_path)
 
             # Return the analysis text
             return analysis
