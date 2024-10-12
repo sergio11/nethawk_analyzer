@@ -4,6 +4,10 @@ NetHawk is an advanced, AI-powered tool designed for ethical hacking and compreh
 
 Thanks to AI-driven automation and intelligent decision-making, NetHawk simplifies port scanning, vulnerability detection, and report generation, making security audits faster, smarter, and more efficient.
 
+🙏 I would like to express my sincere gratitude to [Santiago Hernández, a leading expert in Cybersecurity and Artificial Intelligence](https://www.udemy.com/user/shramos/). His outstanding course on **Cybersecurity and Ethical Hacking**, available on Udemy, was instrumental in the development of this project. The insights and techniques I gained from his course were invaluable in guiding my approach to cybersecurity practices. Thank you for sharing your knowledge and expertise!
+
+🔒 **Disclaimer**: This tool is designed for educational and research purposes. Misuse of this tool could result in violation of laws and regulations. Please use responsibly.
+
 ## 🌟 Key Features:
 
 - 🔧 **Multi-Tool Scanning**: Combines the power of Scapy and Nmap to conduct in-depth network scans, ensuring a comprehensive view of network activity and vulnerabilities.
@@ -122,5 +126,45 @@ The API raises specific errors for known issues, such as:
 | **fpdf2**               | `2.8.1`   | A library for generating PDF documents using Python.                                         |
 | **python-dotenv**       | `1.0.1`   | A tool to read key-value pairs from a `.env` file and set them as environment variables.     |
 
+## 🤝 **Contributing**
+Contributions to NetHawk are highly encouraged! If you're interested in adding new features, resolving bugs, or enhancing the project's functionality, please feel free to submit pull requests.
 
+## Get in Touch 📬
 
+NetHawk is developed and maintained by **Sergio Sánchez Sánchez** (Dream Software). Special thanks to the open-source community and the contributors who have made this project possible. If you have any questions, feedback, or suggestions, feel free to reach out at  [dreamsoftware92@gmail.com](mailto:dreamsoftware92@gmail.com).
+
+## License ⚖️
+
+This project is licensed under the MIT License, an open-source software license that allows developers to freely use, copy, modify, and distribute the software. 🛠️ This includes use in both personal and commercial projects, with the only requirement being that the original copyright notice is retained. 📄
+
+Please note the following limitations:
+
+- The software is provided "as is", without any warranties, express or implied. 🚫🛡️
+- If you distribute the software, whether in original or modified form, you must include the original copyright notice and license. 📑
+- The license allows for commercial use, but you cannot claim ownership over the software itself. 🏷️
+
+The goal of this license is to maximize freedom for developers while maintaining recognition for the original creators.
+
+```
+MIT License
+
+Copyright (c) 2024 Dream software - Sergio Sánchez 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
