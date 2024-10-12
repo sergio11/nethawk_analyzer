@@ -1,11 +1,11 @@
 import platform
 import subprocess
-from NetHawkAnalyzer.core.ai_security_analyzer import AISecurityAnalyzer
-from NetHawkAnalyzer.core.host_scanner import HostScanner
-from NetHawkAnalyzer.core.port_scanner import PortScanner
-from NetHawkAnalyzer.core.service_scanner import ServiceScanner
-from NetHawkAnalyzer.core.smb_scanner import SMBScanner
-from NetHawkAnalyzer.utils.printer import print_table
+from core.ai_security_analyzer import AISecurityAnalyzer
+from core.host_scanner import HostScanner
+from core.port_scanner import PortScanner
+from core.service_scanner import ServiceScanner
+from core.smb_scanner import SMBScanner
+from utils.printer import print_table
 from tqdm import tqdm
 
 
