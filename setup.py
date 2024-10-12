@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='NetHawkAnalyzer',  
-    version='0.1.3',
+    version='0.1.6',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
@@ -18,7 +18,8 @@ setup(
     ],
     author='Sergio Sánchez Sánchez',
     author_email='dreamsoftware92@gmail.com',
-    description='A package for cybersecurity network analysis and vulnerability assessment.',
+    description='🔍💻 NetHawkAnalyzer: An advanced AI-powered tool for ethical hacking, cybersecurity network analysis, and vulnerability assessment. 🦅✨',
+    keywords=['cybersecurity', 'ethical hacking', 'network analysis', 'vulnerability assessment', 'AI', 'Scapy', 'Nmap', 'Python', 'information security', 'security auditing'],
     url='https://github.com/sergio11/nethawk_analyzer',
     classifiers=[
         'Development Status :: 3 - Alpha',
