@@ -175,6 +175,80 @@ Explore the following images to see how **NetHawk** works and the valuable infor
 | **fpdf2**               | `2.8.1`   | A library for generating PDF documents using Python.                                         |
 | **python-dotenv**       | `1.0.1`   | A tool to read key-value pairs from a `.env` file and set them as environment variables.     |
 
+
+## Getting Started with NetHawkAnalyzer 🦅
+
+To run the example provided below, follow these steps:
+
+### Prerequisites
+
+1. **Install NetHawkAnalyzer**:
+   Ensure you have the package installed. If you haven't done this yet, you can install it using pip:
+
+   ```bash
+   pip install NetHawkAnalyzer==0.1.9
+   ```
+2. **Set Up Environment Variables**: You need to set up two environment variables: **GROQ_API_KEY** and **MODEL_ID**. You can do this by creating a .env file in your project directory and adding your keys there.
+
+Example .env file:
+
+```bash
+GROQ_API_KEY=your_groq_api_key_here
+MODEL_ID=your_model_id_here
+ ```
+
+**Running the Example**
+
+Here's a sample script that demonstrates how to use NetHawkAnalyzer for network analysis. This script will load your environment variables, initialize the analyzer with a specified network range, and run a full scan.
+
+```python
+import os 
+from NetHawkAnalyzer.analyzer import NetHawkAnalyzer
+from dotenv import load_dotenv
+
+def main():
+    # Load environment variables from .env file
+    load_dotenv()
+
+    # Retrieve your API key and model ID from environment variables
+    groq_api_key = os.getenv("GROQ_API_KEY")
+    model_id = os.getenv("MODEL_ID")
+ 
+    # Initialize the NetHawkAnalyzer with your network range
+    analyzer = NetHawkAnalyzer(
+        network_range="192.168.11.0/24", 
+        groq_api_key=groq_api_key, 
+        model_id=model_id
+    )
+    
+    # Run a full scan
+    results = analyzer.run_full_scan()
+    
+    # Optionally, process or save the results
+    print("Full scan completed!")
+    print(results)
+
+if __name__ == "__main__":
+    main()
+```
+
+### Explanation
+
+- **Loading Environment Variables**: The script uses the `dotenv` library to load environment variables from a `.env` file. This allows you to keep sensitive information secure.
+
+- **Network Analyzer Initialization**: The `NetHawkAnalyzer` is initialized with the specified network range and your API credentials.
+
+- **Running a Scan**: The `run_full_scan()` method is called to perform a comprehensive network analysis.
+
+- **Displaying Results**: Finally, the results of the scan are printed to the console.
+
+### Important Notes
+
+- Make sure to replace `your_groq_api_key_here` and `your_model_id_here` in your `.env` file with your actual API key and model ID.
+- Ensure that the specified network range is appropriate for your network setup.
+
+By following these steps, you can successfully run the example script and begin analyzing your network using `NetHawkAnalyzer`! 🔍💻
+
 ## Acknowledgements 🙏
 
 🙏 I would like to express my sincere gratitude to [Santiago Hernández, a leading expert in Cybersecurity and Artificial Intelligence](https://www.udemy.com/user/shramos/). His outstanding course on **Cybersecurity and Ethical Hacking**, available on Udemy, was instrumental in the development of this project. The insights and techniques I gained from his course were invaluable in guiding my approach to cybersecurity practices. Thank you for sharing your knowledge and expertise!
