@@ -1,1 +1,1 @@
-NetHawkAnalyzer==0.1.5
+NetHawkAnalyzer==0.1.9
