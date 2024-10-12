@@ -172,6 +172,10 @@ Explore the following images to see how **NetHawk** works and the valuable infor
 | **fpdf2**               | `2.8.1`   | A library for generating PDF documents using Python.                                         |
 | **python-dotenv**       | `1.0.1`   | A tool to read key-value pairs from a `.env` file and set them as environment variables.     |
 
+## Acknowledgements 🙏
+
+🙏 I would like to express my sincere gratitude to [Santiago Hernández, a leading expert in Cybersecurity and Artificial Intelligence](https://www.udemy.com/user/shramos/). His outstanding course on **Cybersecurity and Ethical Hacking**, available on Udemy, was instrumental in the development of this project. The insights and techniques I gained from his course were invaluable in guiding my approach to cybersecurity practices. Thank you for sharing your knowledge and expertise!
+
 ## 🤝 **Contributing**
 Contributions to NetHawk are highly encouraged! If you're interested in adding new features, resolving bugs, or enhancing the project's functionality, please feel free to submit pull requests.
 
