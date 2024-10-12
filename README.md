@@ -183,6 +183,15 @@ Contributions to NetHawk are highly encouraged! If you're interested in adding n
 
 NetHawk is developed and maintained by **Sergio Sánchez Sánchez** (Dream Software). Special thanks to the open-source community and the contributors who have made this project possible. If you have any questions, feedback, or suggestions, feel free to reach out at  [dreamsoftware92@gmail.com](mailto:dreamsoftware92@gmail.com).
 
+## Visitors Count
+
+<img width="auto" src="https://profile-counter.glitch.me/nethawk_analyzer/count.svg" />
+ 
+ ## Please Share & Star the repository to keep me motivated.
+  <a href = "https://github.com/sergio11/nethawk_analyzer/stargazers">
+     <img src = "https://img.shields.io/github/stars/sergio11/nethawk_analyzer" />
+  </a>
+
 ## License ⚖️
 
 This project is licensed under the MIT License, an open-source software license that allows developers to freely use, copy, modify, and distribute the software. 🛠️ This includes use in both personal and commercial projects, with the only requirement being that the original copyright notice is retained. 📄
