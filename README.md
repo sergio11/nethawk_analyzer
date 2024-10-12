@@ -185,7 +185,7 @@ To run the example provided below, follow these steps:
    Ensure you have the package installed. If you haven't done this yet, you can install it using pip:
 
    ```bash
-   pip install NetHawkAnalyzer==0.1.9
+   pip install -r examples/requirements.txt
    ```
 2. **Set Up Environment Variables**: You need to set up two environment variables: **GROQ_API_KEY** and **MODEL_ID**. You can do this by creating a .env file in your project directory and adding your keys there.
 
