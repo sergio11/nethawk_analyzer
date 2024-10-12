@@ -19,7 +19,7 @@ setup(
     author='Sergio Sánchez Sánchez',
     author_email='dreamsoftware92@gmail.com',
     description='A package for cybersecurity network analysis and vulnerability assessment.',
-    url='https://github.com/tu_usuario/nethawk',
+    url='https://github.com/sergio11/nethawk_analyzer',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',

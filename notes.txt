@@ -1,6 +1,0 @@
-python -m venv NetHawk-Kali
-
-vmware-hgfsclient
-sudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
-source NetHawk-Kali/bin/activate
-sudo /home/kali/Desktop/NetHawk-Kali/bin/python NetHawkAnalyzer/main.py
