@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='NetHawkAnalyzer',  
-    version='0.1.9',
+    version='0.1.10',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
@@ -13,8 +13,7 @@ setup(
         'python3-nmap==1.9.1',
         'langchain==0.2.16',
         'langchain-groq==0.1.10',
-        'fpdf2==2.8.1',
-        'python-dotenv==1.0.1'
+        'fpdf2==2.8.1'
     ],
     author='Sergio Sánchez Sánchez',
     author_email='dreamsoftware92@gmail.com',
