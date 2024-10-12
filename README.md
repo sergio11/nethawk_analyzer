@@ -108,5 +108,19 @@ The API raises specific errors for known issues, such as:
 - **`ValueError`**: Raised for unknown scanning methods.
 - Proper error handling ensures users are informed of any issues during the scanning process.
 
-By leveraging the NetHawk API, users can efficiently conduct security assessments and gain insights into their network's vulnerabilities with ease! 🌟
+## 📦 Required Dependencies
+
+| Dependency              | Version    | Description                                                                                   |
+|-------------------------|------------|-----------------------------------------------------------------------------------------------|
+| **scapy**               | `2.6.0`   | A powerful Python library used for network packet manipulation and analysis.                 |
+| **tqdm**                | `4.65.0`   | A fast, extensible progress bar for loops and file processing.                               |
+| **rich**                | `13.9.2`  | A library for rich text and beautiful formatting in the terminal.                             |
+| **pysmb**               | `1.2.10`  | A Python implementation of the SMB/CIFS protocol for network file sharing.                    |
+| **python3-nmap**       | `1.9.1`   | A Python library that allows you to interact with Nmap from your Python scripts.            |
+| **langchain**           | `0.2.16`  | A framework for building applications with language models and AI capabilities.               |
+| **langchain-groq**      | `0.1.10`  | An extension for Langchain that enables integration with Groq-based systems.                  |
+| **fpdf2**               | `2.8.1`   | A library for generating PDF documents using Python.                                         |
+| **python-dotenv**       | `1.0.1`   | A tool to read key-value pairs from a `.env` file and set them as environment variables.     |
+
+
 
