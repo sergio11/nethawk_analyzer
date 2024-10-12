@@ -3,7 +3,7 @@
 NetHawk is an advanced, AI-powered tool designed for ethical hacking and comprehensive network vulnerability assessment. Built for cybersecurity professionals, network administrators, and ethical hackers, NetHawk utilizes powerful tools like Scapy and Nmap to perform deep scans, analyze network security, and uncover potential vulnerabilities in target systems.
 
 [![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?style=flat-square)](https://github.com/sergio11/nethawk_analyzer)
-[![PyPI](https://img.shields.io/pypi/v/VehicleDetectionTracker.svg?style=flat-square)](https://pypi.org/project/NetHawkAnalyzer/)
+[![PyPI](https://img.shields.io/pypi/v/NetHawkAnalyzer.svg?style=flat-square)](https://pypi.org/project/NetHawkAnalyzer/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/sergio11/nethawk_analyzer/blob/main/LICENSE)
 
 Thanks to AI-driven automation and intelligent decision-making, NetHawk simplifies port scanning, vulnerability detection, and report generation, making security audits faster, smarter, and more efficient.
@@ -173,7 +173,6 @@ Explore the following images to see how **NetHawk** works and the valuable infor
 | **langchain**           | `0.2.16`  | A framework for building applications with language models and AI capabilities.               |
 | **langchain-groq**      | `0.1.10`  | An extension for Langchain that enables integration with Groq-based systems.                  |
 | **fpdf2**               | `2.8.1`   | A library for generating PDF documents using Python.                                         |
-| **python-dotenv**       | `1.0.1`   | A tool to read key-value pairs from a `.env` file and set them as environment variables.     |
 
 
 ## Getting Started with NetHawkAnalyzer 🦅
@@ -271,7 +270,7 @@ NetHawk is developed and maintained by **Sergio Sánchez Sánchez** (Dream Softw
 
 
 [![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?style=flat-square)](https://github.com/sergio11/nethawk_analyzer)
-[![PyPI](https://img.shields.io/pypi/v/VehicleDetectionTracker.svg?style=flat-square)](https://pypi.org/project/NetHawkAnalyzer/)
+[![PyPI](https://img.shields.io/pypi/v/NetHawkAnalyzer.svg?style=flat-square)](https://pypi.org/project/NetHawkAnalyzer/)
 
 ## License ⚖️
 
