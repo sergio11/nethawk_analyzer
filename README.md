@@ -1,16 +1,14 @@
 # NetHawk 🦅: AI-Powered Ethical Hacking & Network Vulnerability Assessment 🔍💻🛡️🌐
 
-NetHawk is an advanced, AI-powered tool designed for ethical hacking and comprehensive network vulnerability assessment. Built for cybersecurity professionals, network administrators, and ethical hackers, NetHawk utilizes powerful tools like Scapy and Nmap to perform deep scans, analyze network security, and uncover potential vulnerabilities in target systems.
-
 [![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?style=flat-square)](https://github.com/sergio11/nethawk_analyzer)
-[![PyPI](https://img.shields.io/pypi/v/NetHawkAnalyzer.svg?style=flat-square)](https://pypi.org/project/NetHawkAnalyzer/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/sergio11/nethawk_analyzer/blob/main/LICENSE)
+
+NetHawk is an advanced, AI-powered tool designed for ethical hacking and comprehensive network vulnerability assessment. Built for cybersecurity professionals, network administrators, and ethical hackers, NetHawk utilizes powerful tools like Scapy and Nmap to perform deep scans, analyze network security, and uncover potential vulnerabilities in target systems.
 
 Thanks to AI-driven automation and intelligent decision-making, NetHawk simplifies port scanning, vulnerability detection, and report generation, making security audits faster, smarter, and more efficient.
 
 🙏 I would like to express my sincere gratitude to [Santiago Hernández, a leading expert in Cybersecurity and Artificial Intelligence](https://www.udemy.com/user/shramos/). His outstanding course on **Cybersecurity and Ethical Hacking**, available on Udemy, was instrumental in the development of this project. The insights and techniques I gained from his course were invaluable in guiding my approach to cybersecurity practices. Thank you for sharing your knowledge and expertise!
 
-🔒 **Disclaimer**: This tool is designed for educational and research purposes. Misuse of this tool could result in violation of laws and regulations. Please use responsibly.
 
 <p align="center">
   <img src="https://img.shields.io/badge/langchain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
@@ -21,6 +19,13 @@ Thanks to AI-driven automation and intelligent decision-making, NetHawk simplifi
 <p align="center">
   <img src="doc/screenshots/picture_1.PNG" />
 </p>
+
+## ⚠️ Disclaimer  
+
+**NetHawk** has been developed exclusively for educational and research purposes as part of my learning journey in **Ethical Hacking**. This project serves as a practical application of the skills acquired during cybersecurity training, allowing me to experiment in a **controlled lab environment** and include this tool in my **cybersecurity portfolio**.  
+
+This tool is intended **only for authorized testing environments** where explicit permission has been granted. **Unauthorized use on external systems is strictly prohibited** and may violate laws.
+I disclaim any responsibility for misuse of this tool. **Always obtain proper authorization** before conducting security assessments.  
 
 ## 🌟 **Explore My Other Open-Source Ethical Hacking Tools**
 
@@ -263,6 +268,13 @@ if __name__ == "__main__":
 
 By following these steps, you can successfully run the example script and begin analyzing your network using `NetHawkAnalyzer`! 🔍💻
 
+## ⚠️ Disclaimer  
+
+**NetHawk** has been developed exclusively for educational and research purposes as part of my learning journey in **Ethical Hacking**. This project serves as a practical application of the skills acquired during cybersecurity training, allowing me to experiment in a **controlled lab environment** and include this tool in my **cybersecurity portfolio**.  
+
+This tool is intended **only for authorized testing environments** where explicit permission has been granted. **Unauthorized use on external systems is strictly prohibited** and may violate laws.
+I disclaim any responsibility for misuse of this tool. **Always obtain proper authorization** before conducting security assessments.  
+
 ## Acknowledgements 🙏
 
 🙏 I would like to express my sincere gratitude to [Santiago Hernández, a leading expert in Cybersecurity and Artificial Intelligence](https://www.udemy.com/user/shramos/). His outstanding course on **Cybersecurity and Ethical Hacking**, available on Udemy, was instrumental in the development of this project. The insights and techniques I gained from his course were invaluable in guiding my approach to cybersecurity practices. Thank you for sharing your knowledge and expertise!
@@ -282,10 +294,6 @@ NetHawk is developed and maintained by **Sergio Sánchez Sánchez** (Dream Softw
   <a href = "https://github.com/sergio11/nethawk_analyzer/stargazers">
      <img src = "https://img.shields.io/github/stars/sergio11/nethawk_analyzer" />
   </a>
-
-
-[![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?style=flat-square)](https://github.com/sergio11/nethawk_analyzer)
-[![PyPI](https://img.shields.io/pypi/v/NetHawkAnalyzer.svg?style=flat-square)](https://pypi.org/project/NetHawkAnalyzer/)
 
 ## License ⚖️
 
