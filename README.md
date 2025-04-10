@@ -1,14 +1,15 @@
 # NetHawk 🦅: AI-Powered Ethical Hacking & Network Vulnerability Assessment 🔍💻🛡️🌐
 
-[![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?style=flat-square)](https://github.com/sergio11/nethawk_analyzer)
+[![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?style=flat-square)](https://github.com/sergio11/nethawk_analyzer)  
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/sergio11/nethawk_analyzer/blob/main/LICENSE)
 
-NetHawk is an advanced, AI-powered tool designed for ethical hacking and comprehensive network vulnerability assessment. Built for cybersecurity professionals, network administrators, and ethical hackers, NetHawk utilizes powerful tools like Scapy and Nmap to perform deep scans, analyze network security, and uncover potential vulnerabilities in target systems.
+**NetHawk** is a personal project developed as part of a **Cybersecurity and Ethical Hacking course**. It was created with educational purposes in mind, allowing me to put into practice core concepts in ethical hacking, network analysis, and the use of AI in security automation.
 
-Thanks to AI-driven automation and intelligent decision-making, NetHawk simplifies port scanning, vulnerability detection, and report generation, making security audits faster, smarter, and more efficient.
+NetHawk utilizes powerful tools like **Scapy** and **Nmap** to perform deep scans, analyze network security, and uncover potential vulnerabilities in target systems. Through AI-driven automation, it also streamlines port scanning, vulnerability detection, and report generation — making learning more interactive and hands-on.
 
-🙏 I would like to express my sincere gratitude to [Santiago Hernández, a leading expert in Cybersecurity and Artificial Intelligence](https://www.udemy.com/user/shramos/). His outstanding course on **Cybersecurity and Ethical Hacking**, available on Udemy, was instrumental in the development of this project. The insights and techniques I gained from his course were invaluable in guiding my approach to cybersecurity practices. Thank you for sharing your knowledge and expertise!
+> ⚠️ **Disclaimer:** NetHawk is intended solely for learning and ethical use. It should never be used for malicious purposes.
 
+🙏 **Special thanks to** [Santiago Hernández](https://www.udemy.com/user/shramos/), a leading expert in Cybersecurity and Artificial Intelligence. His outstanding Udemy course on **Cybersecurity and Ethical Hacking** was instrumental in the creation of this project. The knowledge and techniques shared there were essential for building NetHawk. Thank you for your guidance and inspiration!
 
 <p align="center">
   <img src="https://img.shields.io/badge/langchain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
@@ -27,130 +28,141 @@ Thanks to AI-driven automation and intelligent decision-making, NetHawk simplifi
 This tool is intended **only for authorized testing environments** where explicit permission has been granted. **Unauthorized use on external systems is strictly prohibited** and may violate laws.
 I disclaim any responsibility for misuse of this tool. **Always obtain proper authorization** before conducting security assessments.  
 
-## 🌟 **Explore My Other Open-Source Ethical Hacking Tools**
+## 🌟 **Explore My Other Educational Ethical Hacking Projects**
 
-If you're interested in more powerful tools for ethical hacking, make sure to check out my other open-source projects designed to help cybersecurity professionals and penetration testers:
+As part of my journey through cybersecurity and ethical hacking, I've developed a collection of open-source tools to put into practice the concepts I've learned. These projects are intended for **educational purposes**, helping both myself and others gain hands-on experience in areas like network analysis, vulnerability detection, and penetration testing.
 
-- [🦅 **NetHawk**](https://github.com/sergio11/nethawk_analyzer): A state-of-the-art **AI-powered ethical hacking tool** for **network vulnerability assessment**. Using advanced frameworks like **Scapy** and **Nmap**, NetHawk automates **port scanning**, **vulnerability detection**, and **report generation**, making security audits faster, smarter, and more efficient. Whether you're a **network administrator**, **cybersecurity expert**, or **ethical hacker**, NetHawk simplifies the assessment process and offers actionable insights to fortify your systems.
-- [💀 **Nemesys**](https://github.com/sergio11/nemesys): An advanced **exploitation** and **post-exploitation** tool built on top of the **Metasploit Framework** for automating critical data harvesting and system enumeration.  
-- [🕷️ **BlackVenom**](https://github.com/sergio11/blackvenom): The ultimate **ARP** and **DNS spoofing** tool for **intercepting network traffic** and uncovering vulnerabilities with stealth and precision.  
-- [🌐 **ZeroTrace**](https://github.com/sergio11/zero_trace_hacking_tool): A powerful **search engine dorking** tool designed to identify **attack vectors** and uncover **exposed sensitive information** across the web.
-- 🔐 **DecryptX**: An **advanced hash and password security assessment tool** that empowers you to analyze **password hashes**, **encrypted ZIP files**, and more. Ideal for evaluating the strength of encryption and identifying weaknesses in **security implementations**.
-- [ 🌑 **EclipseRecon**](https://github.com/sergio11/eclipserecon): is a stealthy web reconnaissance tool for uncovering hidden vulnerabilities, subdomains, and site structures. 🕵️‍♂️🔍 It empowers security professionals to identify critical attack surfaces with precision, ensuring proactive defense. 🚨💻
-- [ 🌐 **ZoneGuardian**](https://github.com/sergio11/zoneguardian): A powerful tool to analyze DNS configurations, detect vulnerabilities, and generate actionable security reports. 🔒🚀 Safeguard your digital assets with precision and ease!
-- 🔍 **Retrospect**: A cutting-edge **reconnaissance and security analysis tool** that retrieves and analyzes historical web snapshots, helping you uncover past vulnerabilities and misconfigurations before they can be exploited today. Ideal for **ethical hackers** and **digital forensics experts**.
+Here are some of the tools I've built:
 
-These tools are designed to streamline penetration testing, enhance security assessments, and provide in-depth insights into vulnerabilities. Explore them to level up your ethical hacking skills! 💻🔍
+- [🦅 **NetHawk**](https://github.com/sergio11/nethawk_analyzer): An **AI-powered educational tool** for performing **network vulnerability assessments**. Leveraging frameworks like **Scapy** and **Nmap**, it automates **port scanning**, **vulnerability detection**, and **report generation**, helping learners understand how security audits work in practice.
+- [💀 **Nemesys**](https://github.com/sergio11/nemesys): A tool built on the **Metasploit Framework**, focused on practicing **exploitation** and **post-exploitation techniques**, including system enumeration and data harvesting.
+- [🕷️ **BlackVenom**](https://github.com/sergio11/blackvenom): A tool for learning about **ARP** and **DNS spoofing** and how they can be used to intercept and analyze network traffic in a controlled, ethical environment.
+- [🌐 **ZeroTrace**](https://github.com/sergio11/zero_trace_hacking_tool): A project focused on **search engine dorking**, helping identify publicly exposed data and understand how sensitive information can be indexed and discovered online.
+- 🔐 **DecryptX**: A learning tool for **hash analysis** and **password strength evaluation**, allowing users to explore real-world scenarios involving password security and encryption.
+- [🌑 **EclipseRecon**](https://github.com/sergio11/eclipserecon): A web reconnaissance tool for discovering hidden paths, subdomains, and possible vulnerabilities. Ideal for practicing the **recon phase** of ethical hacking.
+- [🌐 **ZoneGuardian**](https://github.com/sergio11/zoneguardian): A DNS analysis tool that helps detect misconfigurations and vulnerabilities in domain setups — a key skill in understanding infrastructure security.
+- 🔍 **Retrospect**: Focused on digital forensics and security research, this tool allows users to analyze historical web data to find **past misconfigurations or exposed data**.
 
-## 🌟 Key Features:
+Each of these projects was created to reinforce learning through real practice. Feel free to explore them, adapt them, and use them to grow your skills in ethical hacking and cybersecurity. 💻🔍
 
-- 🔧 **Multi-Tool Scanning**: Combines the power of Scapy and Nmap to conduct in-depth network scans, ensuring a comprehensive view of network activity and vulnerabilities.
-  
-- 🚪 **Aggressive and Comprehensive Port Scanning**: Supports TCP, UDP, and Xmas scans to detect open, closed, and filtered ports, identifying potential entry points for attackers.
+## 🌟 Key Features of NetHawk:
 
-- 📊 **Result Consolidation**: Merges scan results from both tools to eliminate duplicates, providing a clear and consolidated view of your network's security status.
+- 🔧 **Multi-Tool Scanning**: Combines the capabilities of Scapy and Nmap to offer thorough network scans, giving users a broad view of potential vulnerabilities.
+- 🚪 **Advanced Port Scanning**: Supports TCP, UDP, and Xmas scans to detect open, closed, and filtered ports — ideal for learning how attackers discover network entry points.
+- 📊 **Result Consolidation**: Merges results from different tools into a single report, teaching good practices in data organization and analysis.
+- ⚡ **High Concurrency**: Demonstrates how to optimize scans for performance using threading and parallel execution — useful for real-world scalability.
+- ⏱️ **Customizable Parameters**: Allows users to tweak settings like timeouts and port ranges, encouraging experimentation and deeper understanding of scanning behavior.
+- 🤖 **AI-Powered Analysis**: Offers a practical introduction to applying AI logic for automated decision-making in cybersecurity tools.
 
-- ⚡ **High Concurrency**: Efficiently scans wide ranges of ports using multiple threads, allowing for fast and scalable performance for networks of any size.
+## 🎯 Educational Use Cases:
 
-- ⏱️ **Customizable Settings**: Configure parameters and timeouts according to your network conditions and security requirements.
+- 🔓 **Penetration Testing Practice**: Helps ethical hacking learners simulate attacks in safe environments and recognize potential weaknesses before they’re exploited.
+- 🔍 **Network Security Audits**: Supports IT students and professionals in conducting internal scans to identify misconfigurations and learn how to interpret scan data effectively.
 
-- 🤖 **AI-Powered Analysis**: Offers smarter vulnerability analysis with actionable insights, helping you take appropriate measures based on findings.
+## 🔍 Host and Port Scanning Strategy (How It Works):
 
-## 🎯 Use Cases:
+NetHawk implements a layered scanning approach to teach how different scanning techniques complement each other for comprehensive vulnerability detection.
 
-- 🔓 **Penetration Testing**: Ethical hackers can quickly identify exploitable vulnerabilities in networks, strengthening defenses before malicious actors can attack.
+### 1. **Host Discovery Using Scapy**:
+- **ICMP Ping**: Sends echo requests to identify live hosts.
+- **TCP SYN and ACK Scans**: Used when ICMP is blocked, to detect hosts through common service ports.
+- **Fallback to Socket Scans**: Direct connection attempts are made when both ICMP and TCP probes are inconclusive — simulating real-world firewall evasion tactics.
 
-- 🔍 **Network Security Auditing**: IT teams can use NetHawk to audit network security, scanning for open ports, misconfigured services, and hidden vulnerabilities.
+### 2. **Port Scanning Using Scapy and Nmap**:
+- **Scapy**: Performs detailed scans using:
+  - **TCP SYN** (Stealth scan)
+  - **UDP Scan** (For stateless services)
+  - **Xmas Scan** (For analyzing unusual TCP flags responses)
+- **Nmap**: Adds service detection, OS guessing, and extended port coverage.
 
-## 🔍 Host and Port Scanning Strategy:
+Results are then **merged**, avoiding duplicates and giving a clearer view of open services and attack surfaces.
 
-NetHawk employs an efficient combination of Scapy and Nmap to perform host and port scanning, providing comprehensive and redundant coverage, ensuring maximum detection of active hosts and open ports, even in networks with firewall defenses.
+### 3. **Results Aggregation and Analysis**:
+- By combining Scapy and Nmap outputs, NetHawk produces an educational, high-fidelity vulnerability map — allowing learners to understand how attackers and defenders might see a network differently.
 
-### 1. **Host Detection with Scapy**:
+## 🌐 Learning with the NetHawk API
 
-- **ICMP Ping**: First, NetHawk uses ICMP packets (ping) sent to each host within the target network range to check their availability. If a host responds, it is considered "active."
+As part of the educational design of NetHawk, the tool includes a simplified yet powerful **Python API** to practice concepts such as **network scanning**, **service enumeration**, and **automation in cybersecurity**.
 
-- **TCP SYN and ACK Scanning**: For hosts that do not respond to the ping, NetHawk performs a TCP SYN scan, sending SYN packets to the most common ports (80, 443, 22, etc.) to identify responses indicating open ports. If no response is received for the SYN, an ACK scan is attempted to determine if the host is responding to TCP packets.
+This API abstracts many complexities of lower-level tools like Scapy and Nmap, providing a great opportunity to understand how these tools can be integrated and automated for ethical hacking purposes.
 
-- **Fallback to Socket Scan**: If the previous scans fail (possibly due to firewalls blocking ICMP or SYN packets), a direct connection attempt is made using sockets on the same ports, looking for any response that may indicate an open port.
+### 1. 🚀 **Initialization (`__init__`)**
 
-### 2. **Port Scanning with Scapy and Nmap**:
+The core component is the `NetHawkAnalyzer` class. When initializing it, you provide basic configuration parameters such as:
 
-- **Scapy**: For hosts identified as active, NetHawk uses Scapy to perform deep port scans. Various scan types are supported, including:
-  - **TCP SYN**: Sending SYN packets to discover open ports.
-  - **UDP Scan**: Using UDP packets to detect open or filtered ports.
-  - **Xmas Scan**: Scanning with malformed TCP packets to test for anomalous responses that may indicate filtered or closed ports.
+- `**network_range**`: The target IP range (e.g., `192.168.1.0/24`) — a key part of any scan.
+- `**timeout**`: Scan timeout (in seconds), helping manage performance.
+- `**groq_api_key**` and `**model_id**` (optional): For integrating with AI models, great for experimenting with automated decision-making.
 
-- **Nmap**: NetHawk complements Scapy's results with an Nmap scan, providing additional detection capabilities such as identifying service versions and checking less common ports. Nmap is run by default to scan the most commonly used ports or can be configured for custom scans based on specific security requirements.
+> 🧠 **Learning Tip:** Initializing scanning tools with flexible parameters is key to adapting them for different environments.
 
-- The results from Nmap are consolidated with those from Scapy, eliminating duplicates to offer a clear and detailed final report.
+### 2. 🔍 **Host Scanning (`scan_hosts`)**
 
-### 3. **Aggregation and Analysis of Results**:
+This method detects live devices on the network. It introduces two scanning strategies:
 
-NetHawk combines the results from both scans (Scapy and Nmap) to generate a complete list of active hosts and open ports. By merging results from different approaches, duplication is eliminated, providing a unique view of potential network vulnerabilities. With this combination of techniques, NetHawk ensures complete coverage, detecting hosts and open ports that may be hidden from more conventional scanning methods.
+- `**arp**`: Uses ARP packets — ideal for local networks and very fast.
+- `**scapy**`: Performs more robust host discovery, useful for filtered or protected networks.
 
-## 🌐 Using the NetHawk API
+> 💡 Great for learning how attackers map networks and how to detect hosts even when firewalls are present.
 
-NetHawk provides a powerful and simplified API for conducting security analyses and network scans. This API abstracts the complexity of using tools like Scapy and Nmap, allowing users to interact with various scanning and vulnerability analysis functions efficiently. Below is a guide to its main methods and functionalities:
+### 3. 🚪 **Port Scanning (`scan_ports` and `scan_all_ports`)**
 
-#### 1. 🚀 **Initialization (`__init__`)**
+Understanding how to scan for open ports is fundamental in network security. These methods allow exploration of:
 
-The main object of the API is the `NetHawkAnalyzer` class. To get started, you need to provide a network range (`network_range`) and other optional parameters like timeout (`timeout`) and an AI API key if necessary.
+- **TCP SYN Scan**: Classic "stealth" technique used in many real-world assessments.
+- **UDP Scan**: Useful for stateless services that don't use TCP.
+- **Xmas Scan**: Sends unusual TCP flag combinations — great for exploring how firewalls react.
 
-- **`network_range`**: The range of IP addresses to scan (e.g., `192.168.1.0/24`).
-- **`timeout`**: Timeout in seconds.
-- **`groq_api_key`** and **`model_id`**: Optional keys for integration with AI services.
+`scan_all_ports` runs all techniques at once, providing a complete picture of the host’s exposed services.
 
-#### 2. 🔍 **Host Scanning (`scan_hosts`)**
+> 🔍 **Hands-on Learning:** Try each scan type separately to compare how different firewalls and configurations respond!
 
-This method detects active devices on the network, supporting the following scanning methods:
+### 4. 🛠️ **Service Detection (`scan_services`)**
 
-- **`arp`**: Fast, based on ARP, but limited to local networks.
-- **`scapy`**: More advanced scanning that can detect hosts through firewalls.
+Once open ports are discovered, this method attempts to identify the services running behind them and gather **banner information**.
 
-The result is a list of active hosts ready for the next step.
+> 📚 This is essential for learning **vulnerability assessment**, as knowing the version of a service can help identify known security flaws.
 
-#### 3. 🚪 **Port Scanning (`scan_ports` and `scan_all_ports`)**
+### 5. 📁 **SMB Share Scanning (`scan_smb_shares`)**
 
-NetHawk scans ports using various techniques to detect open ports:
+Use this method to find **publicly accessible SMB shares**, which can represent serious misconfigurations in real environments.
 
-- **TCP SYN**: Detects open TCP ports.
-- **UDP Scan**: Scans for open or filtered UDP ports.
-- **Xmas Scan**: Uses malformed packets to identify filtered ports.
+> 🧪 **Experiment Tip:** Test this in a virtual lab to understand how file sharing services can be exposed without proper restrictions.
 
-The **`scan_all_ports`** method runs all scan types simultaneously to provide a comprehensive view of open ports on each host.
+### 6. 📝 **Full Network Scan (`run_full_scan`)**
 
-#### 4. 🛠️ **Service Detection (`scan_services`)**
+This method puts it all together — a one-stop scan that:
 
-NetHawk allows the identification of services running on open ports and retrieves banner information:
+- Detects hosts
+- Scans ports
+- Identifies services
+- Finds SMB shares
 
-- **`scan_services`**: Scans a list of hosts to detect services and versions, which is crucial for identifying potential vulnerabilities.
-
-#### 5. 📁 **SMB Share Scanning (`scan_smb_shares`)**
-
-You can also scan hosts for public SMB shares:
-
-- **`scan_smb_shares`**: Detects shared resources via SMB, helping identify unauthorized access points in the network.
-
-#### 6. 📝 **Full Network Scan (`run_full_scan`)**
-
-For a comprehensive analysis, use the **`run_full_scan`** method, which combines all scanning functionalities into a single operation:
-
-- This method performs host discovery, port scanning, service detection, and SMB share enumeration.
-- Results can be output in both PDF and JSON formats for detailed reporting and analysis.
+The results can be exported to **PDF** and **JSON**, which is excellent for **report writing practice** — a vital skill for ethical hackers and security analysts.
 
 ### ⚠️ **Error Handling**
 
-The API raises specific errors for known issues, such as:
+NetHawk includes error management to simulate real-world challenges:
 
-- **`ValueError`**: Raised for unknown scanning methods.
-- Proper error handling ensures users are informed of any issues during the scanning process.
+- Raises `ValueError` for invalid scan types or misconfigurations.
+- Guides the user with meaningful feedback.
+
+> 🛠️ **Why this matters:** Learning to write and handle clear error messages is essential for building tools that others can use effectively.
 
 ## 🖼️ Tool Screenshots
 
-In this section, we showcase various screenshots of **NetHawk** in action. These visuals illustrate the user interface, scanning processes, and results generated by our AI-powered ethical hacking and network vulnerability assessment tool. Each screenshot highlights the key features and functionalities, providing an insight into how **NetHawk** simplifies the auditing of network security.
+To help visualize how NetHawk works in practice, this section includes real screenshots of the tool in action.
 
-Explore the following images to see how **NetHawk** works and the valuable information it can uncover for cybersecurity professionals, network administrators, and ethical hackers alike!
+These images show:
+
+- The scanning process
+- Results from network analysis
+- How findings are organized and presented
+
+This makes it easier to understand the **workflow of a network assessment** and how data is interpreted.
+
+> 🧭 **Explore and Analyze:** Use the screenshots to get familiar with the kinds of outputs NetHawk generates, and reflect on how they can be used to make informed security decisions.
+
 
 
 <p align="center">
