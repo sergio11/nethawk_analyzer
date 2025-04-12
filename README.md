@@ -40,7 +40,7 @@ Here are some of the tools I've built:
 - [🌐 **ZeroTrace**](https://github.com/sergio11/zero_trace_hacking_tool): A project focused on **search engine dorking**, helping identify publicly exposed data and understand how sensitive information can be indexed and discovered online.
 - 🔐 **DecryptX**: A learning tool for **hash analysis** and **password strength evaluation**, allowing users to explore real-world scenarios involving password security and encryption.
 - [🌑 **EclipseRecon**](https://github.com/sergio11/eclipserecon): A web reconnaissance tool for discovering hidden paths, subdomains, and possible vulnerabilities. Ideal for practicing the **recon phase** of ethical hacking.
-- [🌐 **ZoneGuardian**](https://github.com/sergio11/zoneguardian): A DNS analysis tool that helps detect misconfigurations and vulnerabilities in domain setups — a key skill in understanding infrastructure security.
+- **ZoneGuardian**: A DNS analysis tool that helps detect misconfigurations and vulnerabilities in domain setups — a key skill in understanding infrastructure security.
 - 🔍 **Retrospect**: Focused on digital forensics and security research, this tool allows users to analyze historical web data to find **past misconfigurations or exposed data**.
 
 Each of these projects was created to reinforce learning through real practice. Feel free to explore them, adapt them, and use them to grow your skills in ethical hacking and cybersecurity. 💻🔍
