@@ -28,23 +28,6 @@ NetHawk utilizes powerful tools like **Scapy** and **Nmap** to perform deep scan
 This tool is intended **only for authorized testing environments** where explicit permission has been granted. **Unauthorized use on external systems is strictly prohibited** and may violate laws.
 I disclaim any responsibility for misuse of this tool. **Always obtain proper authorization** before conducting security assessments.  
 
-## 🌟 **Explore My Other Educational Ethical Hacking Projects**
-
-As part of my journey through cybersecurity and ethical hacking, I've developed a collection of open-source tools to put into practice the concepts I've learned. These projects are intended for **educational purposes**, helping both myself and others gain hands-on experience in areas like network analysis, vulnerability detection, and penetration testing.
-
-Here are some of the tools I've built:
-
-- [🦅 **NetHawk**](https://github.com/sergio11/nethawk_analyzer): An **AI-powered educational tool** for performing **network vulnerability assessments**. Leveraging frameworks like **Scapy** and **Nmap**, it automates **port scanning**, **vulnerability detection**, and **report generation**, helping learners understand how security audits work in practice.
-- [💀 **Nemesys**](https://github.com/sergio11/nemesys): A tool built on the **Metasploit Framework**, focused on practicing **exploitation** and **post-exploitation techniques**, including system enumeration and data harvesting.
-- [🕷️ **BlackVenom**](https://github.com/sergio11/blackvenom): A tool for learning about **ARP** and **DNS spoofing** and how they can be used to intercept and analyze network traffic in a controlled, ethical environment.
-- [🌐 **ZeroTrace**](https://github.com/sergio11/zero_trace_hacking_tool): A project focused on **search engine dorking**, helping identify publicly exposed data and understand how sensitive information can be indexed and discovered online.
-- 🔐 **DecryptX**: A learning tool for **hash analysis** and **password strength evaluation**, allowing users to explore real-world scenarios involving password security and encryption.
-- [🌑 **EclipseRecon**](https://github.com/sergio11/eclipserecon): A web reconnaissance tool for discovering hidden paths, subdomains, and possible vulnerabilities. Ideal for practicing the **recon phase** of ethical hacking.
-- **ZoneGuardian**: A DNS analysis tool that helps detect misconfigurations and vulnerabilities in domain setups — a key skill in understanding infrastructure security.
-- 🔍 **Retrospect**: Focused on digital forensics and security research, this tool allows users to analyze historical web data to find **past misconfigurations or exposed data**.
-
-Each of these projects was created to reinforce learning through real practice. Feel free to explore them, adapt them, and use them to grow your skills in ethical hacking and cybersecurity. 💻🔍
-
 ## 🌟 Key Features of NetHawk:
 
 - 🔧 **Multi-Tool Scanning**: Combines the capabilities of Scapy and Nmap to offer thorough network scans, giving users a broad view of potential vulnerabilities.
