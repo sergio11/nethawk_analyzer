@@ -274,21 +274,7 @@ I disclaim any responsibility for misuse of this tool. **Always obtain proper au
 
 🙏 I would like to express my sincere gratitude to [Santiago Hernández, a leading expert in Cybersecurity and Artificial Intelligence](https://www.udemy.com/user/shramos/). His outstanding course on **Cybersecurity and Ethical Hacking**, available on Udemy, was instrumental in the development of this project. The insights and techniques I gained from his course were invaluable in guiding my approach to cybersecurity practices. Thank you for sharing your knowledge and expertise!
 
-## 🤝 **Contributing**
-Contributions to NetHawk are highly encouraged! If you're interested in adding new features, resolving bugs, or enhancing the project's functionality, please feel free to submit pull requests.
-
-## Get in Touch 📬
-
-NetHawk is developed and maintained by **Sergio Sánchez Sánchez** (Dream Software). Special thanks to the open-source community and the contributors who have made this project possible. If you have any questions, feedback, or suggestions, feel free to reach out at  [dreamsoftware92@gmail.com](mailto:dreamsoftware92@gmail.com).
-
-## Visitors Count
-
-<img width="auto" src="https://profile-counter.glitch.me/nethawk_analyzer/count.svg" />
- 
- ## Please Share & Star the repository to keep me motivated.
-  <a href = "https://github.com/sergio11/nethawk_analyzer/stargazers">
-     <img src = "https://img.shields.io/github/stars/sergio11/nethawk_analyzer" />
-  </a>
+Special thanks to the open-source community and the contributors who have made this project possible.
 
 ## License ⚖️
 
@@ -325,3 +311,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+## Visitors Count
+
+<img width="auto" src="https://profile-counter.glitch.me/nethawk_analyzer/count.svg" />
+
